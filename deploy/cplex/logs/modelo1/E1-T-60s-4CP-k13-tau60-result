@@ -1,0 +1,49 @@
+Found incumbent of value 0.000000 after 0.00 sec. (1.16 ticks)
+Probing time = 0.01 sec. (5.72 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.02 sec. (114.09 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.0000   814680.0000        0     --- 
+*     0+    0                       618811.0000   814680.0000        0   31.65%
+      0     0   656818.6045     5   618811.0000   656818.6045        0    6.14%
+*     0+    0                       655924.0000   656818.6045        0    0.14%
+      0     0   655929.0769     2   655924.0000    Cuts: 3494     1144    0.00%
+
+Implied bound cuts applied:  275
+Flow cuts applied:  1497
+Mixed integer rounding cuts applied:  1618
+Zero-half cuts applied:  101
+Gomory fractional cuts applied:  1
+
+Root node processing (before b&c):
+  Real time             =    0.80 sec. (1696.93 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.80 sec. (1696.93 ticks)
+
+ ===================================================== 
+ Model has 13579 rows and 13622 columns
+ Objective   :        655924.0000
+ UB          :        656818.6045
+ LP gap      :             0.1364 (%)
+ Status      :            Optimal
+ GAP         :             0.0008 (%)
+ Time        :               1.81
+ Iterations  :               1144
+ # B&B nodes :                  0
+ # nodes left:                  1
+
+ Solution includes 13 access points 
+ ===================================================== 
+coverage:	6064
+ ===================================================== 
+solution:	0 0 0 0 0 1 1 1 1 0 1 0 0 0 1 0 0 1 0 0 1 0 0 0 0 1 1 1 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 
+ ===================================================== 

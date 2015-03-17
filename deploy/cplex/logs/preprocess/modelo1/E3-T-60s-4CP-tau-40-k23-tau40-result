@@ -1,0 +1,56 @@
+Found incumbent of value 0.000000 after 0.00 sec. (0.86 ticks)
+Probing time = 0.00 sec. (3.09 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.02 sec. (113.76 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.0000   386640.0000        0     --- 
+*     0+    0                       349569.0000   386640.0000        0   10.60%
+      0     0   377421.8406    18   349569.0000   377421.8406        0    7.97%
+*     0+    0                       374824.0000   377421.8406        0    0.69%
+      0     0   376209.1229    24   374824.0000    Cuts: 2169     1738    0.37%
+*     0+    0                       375188.0000   376209.1229     1738    0.27%
+*     0+    0                       375191.0000   376209.1229     2815    0.27%
+      0     0   375863.2509    20   375191.0000    Cuts: 1322     2815    0.18%
+*     0+    0                       375599.0000   375863.2509     2815    0.07%
+      0     0   375781.4638    19   375599.0000     Cuts: 903     3293    0.05%
+*     0+    0                       375728.0000   375781.4638     3293    0.01%
+      0     0   375731.4310    15   375728.0000     Cuts: 433     3716    0.00%
+
+Implied bound cuts applied:  287
+Flow cuts applied:  474
+Mixed integer rounding cuts applied:  1628
+Zero-half cuts applied:  34
+Gomory fractional cuts applied:  1
+
+Root node processing (before b&c):
+  Real time             =    1.55 sec. (2611.34 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    1.55 sec. (2611.34 ticks)
+
+ ===================================================== 
+ Model has 9667 rows and 9713 columns
+ Objective   :        375728.0000
+ UB          :        377421.8406
+ LP gap      :             0.4508 (%)
+ Status      :            Optimal
+ GAP         :             0.0009 (%)
+ Time        :               3.17
+ Iterations  :               3716
+ # B&B nodes :                  0
+ # nodes left:                  1
+
+ Solution includes 23 access points 
+ ===================================================== 
+coverage:	8239
+ ===================================================== 
+solution:	0 0 0 1 1 1 1 1 0 0 0 0 1 1 1 0 0 1 0 1 1 1 0 0 1 1 1 0 0 1 1 0 0 1 1 1 1 0 0 0 1 0 0 0 1 0 
+ ===================================================== 

@@ -1,0 +1,51 @@
+Found incumbent of value 0.000000 after 0.00 sec. (5.76 ticks)
+Probing time = 0.08 sec. (24.23 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.09 sec. (185.81 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.0000  3713760.0000        0     --- 
+*     0+    0                      3345043.0000  3713760.0000        0   11.02%
+      0     0  3482806.3227    14  3345043.0000  3482806.3227        0    4.12%
+*     0+    0                      3474805.0000  3482806.3227        0    0.23%
+*     0+    0                      3477462.0000  3482806.3227     6940    0.15%
+      0     0  3477917.5221     9  3477462.0000    Cuts: 6230     6940    0.01%
+*     0+    0                      3477765.0000  3477917.5221     6940    0.00%
+
+Implied bound cuts applied:  739
+Flow cuts applied:  1507
+Mixed integer rounding cuts applied:  2404
+Zero-half cuts applied:  85
+Gomory fractional cuts applied:  3
+
+Root node processing (before b&c):
+  Real time             =   17.55 sec. (21567.41 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =   17.55 sec. (21567.41 ticks)
+
+ ===================================================== 
+ Model has 61897 rows and 61980 columns
+ Objective   :       3477765.0000
+ UB          :       3482806.3227
+ LP gap      :             0.1450 (%)
+ Status      :            Optimal
+ GAP         :             0.0044 (%)
+ Time        :              39.63
+ Iterations  :               6940
+ # B&B nodes :                  0
+ # nodes left:                  1
+
+ Solution includes 42 access points 
+ ===================================================== 
+coverage:	46277
+ ===================================================== 
+solution:	1 1 1 1 0 1 1 0 1 0 1 1 0 0 0 0 0 1 1 1 0 1 1 1 0 1 1 0 1 1 0 0 0 1 1 0 0 0 0 0 0 1 1 0 0 1 1 1 0 0 1 0 0 0 1 1 1 0 0 0 0 0 1 1 0 1 1 1 0 0 0 1 1 1 1 1 0 0 0 0 1 0 1 
+ ===================================================== 

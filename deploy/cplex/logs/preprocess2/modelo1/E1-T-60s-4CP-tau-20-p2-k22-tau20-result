@@ -1,0 +1,54 @@
+Found incumbent of value 0.000000 after 0.00 sec. (1.16 ticks)
+Probing time = 0.00 sec. (3.66 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.03 sec. (126.87 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.0000   271560.0000        0     --- 
+*     0+    0                       270525.0000   271560.0000        0    0.38%
+      0     0   271560.0000    11   270525.0000   271560.0000        0    0.38%
+*     0+    0                       271311.0000   271560.0000        0    0.09%
+*     0+    0                       271419.0000   271560.0000      125    0.05%
+      0     0   271560.0000    17   271419.0000     Cuts: 746      125    0.05%
+*     0+    0                       271441.0000   271560.0000      125    0.04%
+*     0+    0                       271442.0000   271560.0000      269    0.04%
+      0     0   271557.5290    25   271442.0000      Cuts: 84      269    0.04%
+*     0+    0                       271542.0000   271557.5290      269    0.01%
+
+Implied bound cuts applied:  80
+Flow cuts applied:  116
+Mixed integer rounding cuts applied:  97
+Zero-half cuts applied:  19
+Gomory fractional cuts applied:  1
+
+Root node processing (before b&c):
+  Real time             =    1.11 sec. (2093.98 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    1.11 sec. (2093.98 ticks)
+
+ ===================================================== 
+ Model has 13579 rows and 13622 columns
+ Objective   :        271542.0000
+ UB          :        271560.0000
+ LP gap      :             0.0066 (%)
+ Status      :            Optimal
+ GAP         :             0.0057 (%)
+ Time        :               2.44
+ Iterations  :                269
+ # B&B nodes :                  0
+ # nodes left:                  1
+
+ Solution includes 22 access points 
+ ===================================================== 
+coverage:	13571
+ ===================================================== 
+solution:	0 1 1 0 0 1 1 1 1 0 1 0 0 0 0 1 0 1 1 0 1 1 0 0 0 1 1 0 1 1 0 1 0 1 0 1 0 1 0 1 1 0 0 
+ ===================================================== 

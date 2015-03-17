@@ -1,0 +1,51 @@
+Found incumbent of value 0.000000 after 0.00 sec. (0.75 ticks)
+Probing time = 0.00 sec. (3.13 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.02 sec. (110.20 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.0000   480900.0000        0     --- 
+*     0+    0                       331765.0000   480900.0000        0   44.95%
+      0     0   390734.1770     7   331765.0000   390734.1770        0   17.77%
+*     0+    0                       387007.0000   390734.1770        0    0.96%
+      0     0   388837.7162     8   387007.0000    Cuts: 2104     2664    0.47%
+*     0+    0                       388035.0000   388837.7162     2664    0.21%
+      0     0   388341.1002     8   388035.0000    Cuts: 1492     3933    0.08%
+*     0+    0                       388322.0000   388341.1002     3933    0.00%
+
+Implied bound cuts applied:  29
+Flow cuts applied:  410
+Mixed integer rounding cuts applied:  2079
+Zero-half cuts applied:  21
+
+Root node processing (before b&c):
+  Real time             =    1.10 sec. (2084.97 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    1.10 sec. (2084.97 ticks)
+
+ ===================================================== 
+ Model has 8016 rows and 8062 columns
+ Objective   :        388322.0000
+ UB          :        390734.1770
+ LP gap      :             0.6212 (%)
+ Status      :            Optimal
+ GAP         :             0.0049 (%)
+ Time        :               2.26
+ Iterations  :               3933
+ # B&B nodes :                  0
+ # nodes left:                  1
+
+ Solution includes 14 access points 
+ ===================================================== 
+coverage:	4074
+ ===================================================== 
+solution:	0 0 0 0 1 0 0 1 0 0 0 0 0 1 1 0 0 1 0 1 0 1 0 0 0 1 1 0 0 1 1 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 
+ ===================================================== 

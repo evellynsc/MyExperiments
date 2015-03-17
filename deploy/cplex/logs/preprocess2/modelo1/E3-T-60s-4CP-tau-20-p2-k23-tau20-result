@@ -1,0 +1,60 @@
+Found incumbent of value 0.000000 after 0.00 sec. (0.88 ticks)
+Probing time = 0.00 sec. (2.86 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.02 sec. (120.01 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.0000   197520.0000        0     --- 
+*     0+    0                       194630.0000   197520.0000        0    1.48%
+      0     0   197520.0000    30   194630.0000   197520.0000        0    1.48%
+*     0+    0                       196981.0000   197520.0000        0    0.27%
+*     0+    0                       197258.0000   197520.0000      247    0.13%
+      0     0   197511.9575    34   197258.0000     Cuts: 558      247    0.13%
+      0     0   197487.8465    30   197258.0000     Cuts: 533      354    0.12%
+      0     0   197466.5456    39   197258.0000     Cuts: 422      515    0.11%
+*     0+    0                       197366.0000   197466.5456      515    0.05%
+      0     0   197451.0130    40   197366.0000     Cuts: 274      638    0.04%
+*     0+    0                       197386.0000   197451.0130      638    0.03%
+      0     0   197447.8851    40   197386.0000     Cuts: 142      686    0.03%
+      0     0   197445.5996    38   197386.0000     Cuts: 101      729    0.03%
+*     0+    0                       197403.0000   197445.5996      729    0.02%
+      0     2   197445.5996    38   197403.0000   197445.5996      729    0.02%
+Elapsed time = 2.01 sec. (2818.91 ticks, tree = 0.01 MB, solutions = 7)
+*     3+    3                       197425.0000   197441.8351      930    0.01%
+
+Implied bound cuts applied:  7
+Flow cuts applied:  58
+Mixed integer rounding cuts applied:  276
+Zero-half cuts applied:  26
+
+Root node processing (before b&c):
+  Real time             =    1.98 sec. (2804.91 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.16 sec. (198.71 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    2.14 sec. (3003.62 ticks)
+
+ ===================================================== 
+ Model has 9877 rows and 9923 columns
+ Objective   :        197425.0000
+ UB          :        197520.0000
+ LP gap      :             0.0481 (%)
+ Status      :            Optimal
+ GAP         :             0.0077 (%)
+ Time        :               6.29
+ Iterations  :                930
+ # B&B nodes :                  3
+ # nodes left:                  4
+
+ Solution includes 23 access points 
+ ===================================================== 
+coverage:	9838
+ ===================================================== 
+solution:	0 1 0 0 1 1 1 0 0 1 1 0 1 1 1 0 0 0 0 1 0 1 0 0 1 0 1 0 1 1 0 0 1 0 0 1 0 1 1 1 0 1 0 1 1 0 
+ ===================================================== 

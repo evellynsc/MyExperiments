@@ -1,0 +1,43 @@
+Found incumbent of value 0.000000 after 0.00 sec. (1.16 ticks)
+Probing time = 0.00 sec. (3.95 ticks)
+Cover probing fixed 0 vars, tightened 488 bounds.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.02 sec. (113.51 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.0000   543120.0000        0     --- 
+*     0+    0                       285106.0000   543120.0000        0   90.50%
+*     0     0      integral     0   320605.0000   320605.0000        0    0.00%
+Elapsed time = 0.28 sec. (1027.26 ticks, tree = 0.00 MB, solutions = 3)
+
+Root node processing (before b&c):
+  Real time             =    0.28 sec. (1025.83 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.28 sec. (1025.83 ticks)
+
+ ===================================================== 
+ Model has 13579 rows and 13622 columns
+ Objective   :        320605.0000
+ UB          :        320605.0000
+ LP gap      :             0.0000 (%)
+ Status      :            Optimal
+ GAP         :             0.0000 (%)
+ Time        :               0.78
+ Iterations  :                  0
+ # B&B nodes :                  0
+ # nodes left:                  0
+
+ Solution includes 4 access points 
+ ===================================================== 
+coverage:	825
+ ===================================================== 
+solution:	0 0 0 0 0 0 1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+ ===================================================== 

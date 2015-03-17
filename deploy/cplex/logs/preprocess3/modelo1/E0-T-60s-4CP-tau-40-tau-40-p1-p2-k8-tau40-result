@@ -1,0 +1,52 @@
+Found incumbent of value 0.000000 after 0.00 sec. (5.71 ticks)
+Probing time = 0.03 sec. (20.39 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.17 sec. (214.59 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.0000  2443120.0000        0     --- 
+*     0+    0                       899457.0000  2443120.0000        0  171.62%
+      0     0  1557032.7286    10   899457.0000  1557032.7286        0   73.11%
+      0     0  1544787.7525    12   899457.0000    Cuts: 7030     9032   71.75%
+      0     0  1541191.6831    12   899457.0000    Cuts: 4599    15508   71.35%
+*     0+    0                      1536429.0000  1541191.6831    18621    0.31%
+      0     0  1539577.3647    12  1536429.0000    Cuts: 2415    18621    0.20%
+      0     0  1536455.1111     2  1536429.0000    Cuts: 7469    22187    0.00%
+
+Implied bound cuts applied:  17
+Flow cuts applied:  4458
+Mixed integer rounding cuts applied:  13613
+Zero-half cuts applied:  140
+Gomory fractional cuts applied:  1
+
+Root node processing (before b&c):
+  Real time             =   60.98 sec. (65932.22 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =   60.98 sec. (65932.22 ticks)
+
+ ===================================================== 
+ Model has 61079 rows and 61162 columns
+ Objective   :       1536429.0000
+ UB          :       1557032.7286
+ LP gap      :             1.3410 (%)
+ Status      :            Optimal
+ GAP         :             0.0017 (%)
+ Time        :             126.94
+ Iterations  :              22187
+ # B&B nodes :                  0
+ # nodes left:                  1
+
+ Solution includes 8 access points 
+ ===================================================== 
+coverage:	18954
+ ===================================================== 
+solution:	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 
+ ===================================================== 

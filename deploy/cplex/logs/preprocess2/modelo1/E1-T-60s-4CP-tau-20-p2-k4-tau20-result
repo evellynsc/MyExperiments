@@ -1,0 +1,50 @@
+Found incumbent of value 0.000000 after 0.00 sec. (1.16 ticks)
+Probing time = 0.00 sec. (3.66 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.03 sec. (118.64 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.0000   271560.0000        0     --- 
+*     0+    0                       191109.0000   271560.0000        0   42.10%
+      0     0   232517.8815     5   191109.0000   232517.8815        0   21.67%
+*     0+    0                       211981.0000   232517.8815        0    9.69%
+*     0     0      integral     0   229899.0000    Cuts: 3143     2336    0.00%
+      0     0        cutoff         229899.0000   229899.0000     2336    0.00%
+Elapsed time = 1.26 sec. (2462.35 ticks, tree = 0.00 MB, solutions = 4)
+
+Flow cuts applied:  1969
+Mixed integer rounding cuts applied:  1115
+Zero-half cuts applied:  31
+Gomory fractional cuts applied:  1
+
+Root node processing (before b&c):
+  Real time             =    1.26 sec. (2460.96 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    1.26 sec. (2460.96 ticks)
+
+ ===================================================== 
+ Model has 13579 rows and 13622 columns
+ Objective   :        229899.0000
+ UB          :        232517.8815
+ LP gap      :             1.1391 (%)
+ Status      :            Optimal
+ GAP         :             0.0000 (%)
+ Time        :               2.72
+ Iterations  :               2336
+ # B&B nodes :                  0
+ # nodes left:                  0
+
+ Solution includes 4 access points 
+ ===================================================== 
+coverage:	8769
+ ===================================================== 
+solution:	0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+ ===================================================== 
