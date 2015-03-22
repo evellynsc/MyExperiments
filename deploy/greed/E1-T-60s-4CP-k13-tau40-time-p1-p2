@@ -1,0 +1,20 @@
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = "en_US:en",
+	LC_ALL = (unset),
+	LC_PAPER = "pt_BR.UTF-8",
+	LC_ADDRESS = "pt_BR.UTF-8",
+	LC_MONETARY = "pt_BR.UTF-8",
+	LC_NUMERIC = "pt_BR.UTF-8",
+	LC_TELEPHONE = "pt_BR.UTF-8",
+	LC_IDENTIFICATION = "pt_BR.UTF-8",
+	LC_MEASUREMENT = "pt_BR.UTF-8",
+	LC_TIME = "pt_BR.UTF-8",
+	LC_NAME = "pt_BR.UTF-8",
+	LANG = "pt_BR.utf8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+
+real	0m1.682s
+user	0m1.672s
+sys	0m0.008s
