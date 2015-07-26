@@ -1,0 +1,24 @@
+Pendências
+
+1) Estudo dos paramêtros de entrada 
+	+ 3 replicações
+	+ Número de gerações: 			50		100	
+	+ Tamanho de população: 		100	300
+	+ Prob de crossover:				0.6	0.8
+	+ Prob de mutação:				0.1	0.3
+
+2) Estudo dos operadores
+	+ Inicialização da população:	4 opções
+	+ Seleção:							1 opção
+	+ Crossover:						2 opções
+	+ Mutação:							1 opção
+	+ Busca Local:						4 opções
+	
+3) Escolha dos paramêtros
+	+ Média dos resultados
+	+ Média de tempo de execução
+	+ Desvio padrão
+	+ 95% ou 99% de confiança 
+
+4) 
+

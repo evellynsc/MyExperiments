@@ -1,0 +1,5 @@
+num_geracoes
+id_pop	num_pop
+id_cross prob_cross
+id_mut	prob_mut
+
