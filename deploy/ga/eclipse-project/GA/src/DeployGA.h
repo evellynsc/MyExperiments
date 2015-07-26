@@ -9,6 +9,7 @@
 #define DEPLOYGA_H_
 
 #include <vector>
+#include <ctime>
 #include "Individual.h"
 #include "DeployProblem.h"
 #include "framework/Crossover.h"
@@ -36,6 +37,8 @@ class DeployGA : public GA {
 	float probLocalSearch;
 	float probCrossover;
 	float tolerance;
+	float timeLimit;
+	float totalTime;
 	int nones;
 	void prune_population(vector<Individual>);
 	void evaluate();
@@ -49,6 +52,7 @@ public:
 	void set_parameters(int, float, float, float, float);
 	Individual get_best();
 	Individual get_worst();
+	float get_total_time();
 	void run();
 };
 

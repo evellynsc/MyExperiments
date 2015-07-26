@@ -22,7 +22,7 @@ DeployProblem::~DeployProblem() {
 void DeployProblem::loadData(string path) {
 	ifstream file(path.c_str());
 	if(file.fail()) {
-		cerr << "Falha na abertura do arquivo.\n";
+		cerr << "Falha na abertura do arquivo de dados.\n";
 		exit(1);
 	}
 	while(!file.eof())

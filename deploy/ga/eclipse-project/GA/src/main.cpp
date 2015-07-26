@@ -36,6 +36,7 @@ void load_genetic_parameters(char *path, int *ngen, int *popinit_id, int *pop_si
 		float *p_crossover, int *mutation_id, float *p_mutation, int *localsearch, float *p_localsearch);
 void start_timer();
 double get_timer();
+float calculate_average_time(vector<float>);
 
 
 int main(int argc, char **argv) {
@@ -47,7 +48,7 @@ int main(int argc, char **argv) {
 
 	// experiment parameters
 	int							replications;
-	vector<double>				execution_time;
+	vector<float>				execution_times;
 	istringstream is(argv[1]);
 	is >> replications;
 
@@ -157,22 +158,15 @@ int main(int argc, char **argv) {
 	for(int i = 0; i < replications; i++) {
 		ga = new DeployGA(statistic, problem, popinit, selection, crossover, mutation, localsearch);
 		ga->set_parameters(ngen, p_crossover, p_mutation, p_localsearch, 0.0);
-		start_timer();
-		cout << "r" << i << ": ";
+//		cout << "r" << i << ": ";
 		ga->run();
-		execution_time.push_back(get_timer());
+		execution_times.push_back(ga->get_total_time());
 		statistic->write();
 		statistic->empty();
 	}
 
-	ofstream ofile;
-	string time_output = output_path + "_time";
-	ofile.open(time_output.c_str(), ios::app);
-	for(int i = 0; i < replications; i++) {
-		ofile << i << ";" << execution_time[i] << endl;
-	}
 
-
+	cout << ">>>>>>>>> AVERAGE TIME: " << calculate_average_time(execution_times) << endl;
 
 	//	cout << pop_size << " " << ngen << " " << p_crossover << " " << p_mutation << " " << genetic_path <<  endl;
 	//	cout << popinit_id << " " << crossover_id << " " << mutation_id <<  endl;
@@ -188,7 +182,7 @@ void load_genetic_parameters(char *path, int *ngen, int *popinit_id, int *pop_si
 		float *p_crossover, int *mutation_id, float *p_mutation, int *localsearch_id, float *p_localsearch) {
 	ifstream file(path);
 	if(file.fail()) {
-		cerr << "Falha na abertura do arquivo.\n";
+		cerr << "Falha na abertura do arquivo de parâmetros do GA.\n";
 		exit(1);
 	}
 
@@ -258,4 +252,14 @@ double get_timer()
 	double result = (double)clock_time / (double)1.e6;
 
 	return result;
+}
+
+
+float calculate_average_time(vector<float> times) {
+	float sum = 0.0;
+	for(int i = 0; i < (int) times.size(); ++i) {
+		sum += times[i];
+	}
+	float average = sum/times.size();
+	return average;
 }

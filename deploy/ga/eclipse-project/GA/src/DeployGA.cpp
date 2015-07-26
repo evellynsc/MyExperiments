@@ -21,6 +21,7 @@ DeployGA::DeployGA(StatisticCollector* statistic, DeployProblem* problem, Popula
 	probCrossover = 0.8;
 	probLocalSearch = 0.5;
 	tolerance = 0.001;
+	timeLimit = 5;
 	nones = problem->getNrsu();
 }
 
@@ -94,13 +95,16 @@ void DeployGA::run() {
 	int currentGeneration = 0;
 	int sample_size = this->statistic->getSampleSize();
 	int npop = popInit->get_size();
+	const clock_t begin_time = clock();
 
 	evaluate();
 	statistic->analyse(this->population);
 
+	float totalTime = 0;
+
 	//	TODO: Acrescentar outro método de parada
-	while(currentGeneration != ngeneration) {
-		cout << "g" << currentGeneration << " ";
+	while(currentGeneration != ngeneration && totalTime <= timeLimit) {
+//		cout << "g" << currentGeneration << " ";
 
 		newPopulation.clear();
 		offspring.clear();
@@ -138,6 +142,8 @@ void DeployGA::run() {
 					newPopulation.push_back(offspring[i]);
 				}
 			}
+			totalTime = float(clock () - begin_time)/CLOCKS_PER_SEC;
+//			cout << ">>>> " << totalTime << endl;
 		}
 		prune_population(newPopulation);
 		currentGeneration++;
@@ -145,10 +151,16 @@ void DeployGA::run() {
 			statistic->analyse(this->population);
 		}
 	}
+	this->totalTime = totalTime;
 //	for(int i = 0; i < npop; i++) {
 //		cout << "last " << population[i] << endl;
 //	}
-	cout << endl;
+
+//	cout << endl;
+}
+
+float DeployGA::get_total_time(){
+	return this->totalTime;
 }
 
 void DeployGA::evaluate() {
