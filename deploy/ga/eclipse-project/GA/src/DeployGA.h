@@ -47,7 +47,8 @@ class DeployGA : public GA {
 
 public:
 	DeployGA();
-	DeployGA(StatisticCollector*, DeployProblem*, PopulationInitialization*, Selection*, Crossover*, Mutation*, LocalSearch*);
+	DeployGA(StatisticCollector*, DeployProblem*, PopulationInitialization*, Selection*, Crossover*, Mutation*,
+			LocalSearch*, float);
 	~DeployGA();
 	void set_parameters(int, float, float, float, float);
 	Individual get_best();

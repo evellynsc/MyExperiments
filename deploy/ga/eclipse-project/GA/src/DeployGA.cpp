@@ -7,8 +7,8 @@
 
 #include "DeployGA.h"
 
-DeployGA::DeployGA(StatisticCollector* statistic, DeployProblem* problem, PopulationInitialization* popInit, Selection* selection,
-		Crossover* crossover, Mutation* mutation, LocalSearch* local_search) {
+DeployGA::DeployGA(StatisticCollector* statistic, DeployProblem* problem, PopulationInitialization* popInit,
+		Selection* selection, Crossover* crossover, Mutation* mutation, LocalSearch* local_search, float timeLimit) {
 	this->problem = problem;
 	this->popInit = popInit;
 	this->selection = selection;
@@ -16,12 +16,13 @@ DeployGA::DeployGA(StatisticCollector* statistic, DeployProblem* problem, Popula
 	this->mutation = mutation;
 	this->statistic = statistic;
 	this->localsearch = local_search;
+	this->totalTime = 0;
+	this->timeLimit = timeLimit;
 	ngeneration = 10;
 	probMutation = 0.1;
 	probCrossover = 0.8;
 	probLocalSearch = 0.5;
 	tolerance = 0.001;
-	timeLimit = 5;
 	nones = problem->getNrsu();
 }
 
@@ -35,7 +36,7 @@ DeployGA::~DeployGA() {
 }
 
 /*
- * Preservar 5% melhores da população antiga
+ * Faz elitismo com o melhor da população.
  */
 void DeployGA::prune_population(vector<Individual> newpopulation) {
 //	int npop = popInit->get_size();
@@ -45,6 +46,9 @@ void DeployGA::prune_population(vector<Individual> newpopulation) {
 	this->population.clear();
 	this->population = newpopulation;
 	evaluate();
+	sort(oldpopulation.begin(), oldpopulation.end(), individual_sort);
+	sort(population.begin(), population.end(), individual_sort);
+	population[0] = oldpopulation[oldpopulation.size()-1];
 //	population[0] = oldpopulation[npop-1];
 //	float prob;
 //	for(int i = 0; i < replace; i++) {
@@ -59,7 +63,7 @@ void DeployGA::prune_population(vector<Individual> newpopulation) {
 //		}
 //
 //	}
-	sort(population.begin(), population.end(), individual_sort);
+
 }
 
 bool DeployGA::exist_individual(Individual individual) {

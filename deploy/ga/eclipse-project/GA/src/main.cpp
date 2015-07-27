@@ -42,18 +42,25 @@ float calculate_average_time(vector<float>);
 int main(int argc, char **argv) {
 
 	if (argc != 7){
-		cout << "usage: \t" << argv[0] << " [number-replications] [required-time] [total-rsu] [param-genetic-file] [input-file] [output-file]" << endl << endl;
+		cout << "usage: \t" << argv[0] << " [number-replications] [time-limit]"
+				" [required-time] [total-rsu] [param-genetic-file] [input-file] [output-file] " << endl << endl;
 		return 0;
 	}
 
 	// experiment parameters
 	int							replications;
+	float						timeLimit;
 	vector<float>				execution_times;
 	istringstream is(argv[1]);
 	is >> replications;
+	is.str("");
+	is.clear();
+	is.str(argv[2]);
+	is >> timeLimit;
+
 
 	// statistic parameters
-	string						output_path = argv[6];
+	string						output_path = argv[7];
 
 	// genetic algorithm parameters
 	int							ngen;
@@ -65,7 +72,7 @@ int main(int argc, char **argv) {
 	float						p_mutation;
 	int							localsearch_id;
 	float						p_localsearch;
-	char*						genetic_path = argv[4];
+	char*						genetic_path = argv[5];
 
 
 	load_genetic_parameters(genetic_path, &ngen, &popinit_id, &pop_size, &crossover_id, &p_crossover, &mutation_id,
@@ -74,14 +81,14 @@ int main(int argc, char **argv) {
 	// problem parameters
 	int							required_time;
 	int							total_rsu;
-	string						problem_path = argv[5];
-	is.str("");
-	is.clear();
-	is.str(argv[2]);
-	is >> required_time;
+	string						problem_path = argv[6];
 	is.str("");
 	is.clear();
 	is.str(argv[3]);
+	is >> required_time;
+	is.str("");
+	is.clear();
+	is.str(argv[4]);
 	is >> total_rsu;
 
 	// problem instantiation
@@ -156,7 +163,7 @@ int main(int argc, char **argv) {
 	}
 
 	for(int i = 0; i < replications; i++) {
-		ga = new DeployGA(statistic, problem, popinit, selection, crossover, mutation, localsearch);
+		ga = new DeployGA(statistic, problem, popinit, selection, crossover, mutation, localsearch, timeLimit);
 		ga->set_parameters(ngen, p_crossover, p_mutation, p_localsearch, 0.0);
 //		cout << "r" << i << ": ";
 		ga->run();
