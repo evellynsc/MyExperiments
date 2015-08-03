@@ -373,7 +373,7 @@ void Model::set_cplex_params(IloCplex *cplex)
     cplex->setParam(IloCplex::ClockType, 2);  // wall clock time (default...)
     
     // objective is integer, absolut gap cannot be less than 1
-//     cplex->setParam(IloCplex::EpAGap, 0.9999);   // absolute MIP gap tolerance
+    //cplex->setParam(IloCplex::EpAGap, 0.9999);   // absolute MIP gap tolerance
     
     // suppress output
     if (this->min_out)
