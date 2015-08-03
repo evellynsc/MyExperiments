@@ -18,5 +18,5 @@ random_exp=( $(echo "1 2 3 4 5 6 7 8" | sed -r 's/(.[^ ]* )/ \1 /g' | tr " " "\n
 for i in ${random_exp[@]}
 do
 	echo "./deploy $number_replication $time_limit $required_time $total_rsu"\
-		"../ga_parameters/exp$i.ga ../databases/$input_file $output_file-exp$i.out" >> $run_file
+		"../ga_parameters/exp$i.ga ../datasets/$input_file $output_file-exp$i.out >> $output_file-exp$i.time;" >> $run_file
 done
