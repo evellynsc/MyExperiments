@@ -41,7 +41,7 @@ float calculate_average_time(vector<float>);
 
 int main(int argc, char **argv) {
 
-	if (argc != 7){
+	if (argc != 8){
 		cout << "usage: \t" << argv[0] << " [number-replications] [time-limit]"
 				" [required-time] [total-rsu] [param-genetic-file] [input-file] [output-file] " << endl << endl;
 		return 0;
@@ -173,7 +173,7 @@ int main(int argc, char **argv) {
 	}
 
 
-	cout << ">>>>>>>>> AVERAGE TIME: " << calculate_average_time(execution_times) << endl;
+	cout << "AVERAGE TIME: " << calculate_average_time(execution_times) << endl;
 
 	//	cout << pop_size << " " << ngen << " " << p_crossover << " " << p_mutation << " " << genetic_path <<  endl;
 	//	cout << popinit_id << " " << crossover_id << " " << mutation_id <<  endl;
