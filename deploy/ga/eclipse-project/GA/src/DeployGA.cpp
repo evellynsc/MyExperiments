@@ -45,10 +45,10 @@ void DeployGA::prune_population(vector<Individual> newpopulation) {
 	vector<Individual> oldpopulation = this->population;
 	this->population.clear();
 	this->population = newpopulation;
-	evaluate();
-	sort(oldpopulation.begin(), oldpopulation.end(), individual_sort);
-	sort(population.begin(), population.end(), individual_sort);
+	evaluate(); //avalia e ordenar o vetor this->population
 	population[0] = oldpopulation[oldpopulation.size()-1];
+	sort(this->population.begin(), this->population.end(), individual_sort);
+
 //	population[0] = oldpopulation[npop-1];
 //	float prob;
 //	for(int i = 0; i < replace; i++) {
