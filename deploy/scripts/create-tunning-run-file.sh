@@ -9,6 +9,8 @@ required_time=$3
 total_rsu=$4
 input_file=$5
 
+echo $number_replication
+echo $input_file
 
 output_file="../output/$input_file-tau$required_time-k$total_rsu"
 run_file="$input_file-tunning.sh"
