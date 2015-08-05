@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+#./parser --dir folder_name
+
 import sys
 import getopt
 from os import listdir

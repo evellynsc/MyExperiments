@@ -8,8 +8,11 @@ dataset_id = args[2]
 id_xp = args[3]
 n_xp = args[4]
 
-# print(folder_name)
+
+
 # print(dataset_id)
+# print(id_xp)
+# print(n_xp)
 
 my.panel.bands <- function(x, y, upper, lower, fill, col, subscripts, ..., font, fontface){
 	upper <- upper[subscripts]
@@ -18,7 +21,7 @@ my.panel.bands <- function(x, y, upper, lower, fill, col, subscripts, ..., font,
 }
 
 calculate.98.confidence.error <- function(data) {
-	print(length(data))
+#	print(length(data))
 	error = qt(0.1, df=length(data)-1)*sd(data)/sqrt(length(data))
 	return(error)
 }
