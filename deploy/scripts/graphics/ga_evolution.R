@@ -18,14 +18,15 @@ my.panel.bands <- function(x, y, upper, lower, fill, col, subscripts, ..., font,
 }
 
 calculate.98.confidence.error <- function(data) {
-	error = qt(0.99, df=length(data)-1)*sd(data)/sqrt(length(data))
+	print(length(data))
+	error = qt(0.1, df=length(data)-1)*sd(data)/sqrt(length(data))
 	return(error)
 }
 
 confidence.interval.evolution <- function(data_list, n_ger) {
 	data = matrix(0,nrow=n_ger,ncol=length(data_list))
 	for(i in 1:length(data_list)) {
-		data[,i] = data_list[[i]][1:n_ger]
+		data[,i] = data_list[[i]][1:n_ger]*100
 	}
 	average = apply(data, 1, mean)
 	error = apply(data, 1, calculate.98.confidence.error)
@@ -33,9 +34,9 @@ confidence.interval.evolution <- function(data_list, n_ger) {
 	up = average + error
 
 	interval = matrix(0, nrow=n_ger, ncol=3)
-	interval[,1] = average*100
-	interval[,2] = low*100
-	interval[,3] = up*100
+	interval[,1] = average
+	interval[,2] = low
+	interval[,3] = up
 
 	# y_max = max(c(left, right, average)) + max(c(left, right, average))/4
 	# y_min = min(c(left, right, average)) - min(c(left, right, average))/4
@@ -92,7 +93,7 @@ lattice.options(default.theme=standard.theme(color=FALSE))
 
 all_data$experiment = as.factor(all_data$experiment)
 all_plot <- xyplot(fitness ~ generation | experiment, data=all_data, groups=experiment, 
-	upper = all_data$high, lower = all_data$low, 
+	upper = all_data$high, lower = all_data$low, #ylim=c(75,85),
 	index.cond=list(c(6,7,8,3,4,5,1,2)),
 	panel = function(x, y, ...){
 		panel.superpose(x, y, panel.groups = my.panel.bands, type='l', fill='gray', col='gray',...)
