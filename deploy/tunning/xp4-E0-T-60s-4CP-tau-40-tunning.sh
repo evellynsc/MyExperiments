@@ -1,0 +1,8 @@
+./deploy 3 100 40 25 ../ga_parameters/xp4/exp1.ga ../datasets/E0-T-60s-4CP-tau-40 ../output/xp4n/E0-T-60s-4CP-tau-40-tau40-k25-exp1.out >> ../output/xp4n/E0-T-60s-4CP-tau-40-tau40-k25-exp1.time;
+./deploy 3 100 40 25 ../ga_parameters/xp4/exp4.ga ../datasets/E0-T-60s-4CP-tau-40 ../output/xp4n/E0-T-60s-4CP-tau-40-tau40-k25-exp4.out >> ../output/xp4n/E0-T-60s-4CP-tau-40-tau40-k25-exp4.time;
+./deploy 3 100 40 25 ../ga_parameters/xp4/exp7.ga ../datasets/E0-T-60s-4CP-tau-40 ../output/xp4n/E0-T-60s-4CP-tau-40-tau40-k25-exp7.out >> ../output/xp4n/E0-T-60s-4CP-tau-40-tau40-k25-exp7.time;
+./deploy 3 100 40 25 ../ga_parameters/xp4/exp6.ga ../datasets/E0-T-60s-4CP-tau-40 ../output/xp4n/E0-T-60s-4CP-tau-40-tau40-k25-exp6.out >> ../output/xp4n/E0-T-60s-4CP-tau-40-tau40-k25-exp6.time;
+./deploy 3 100 40 25 ../ga_parameters/xp4/exp3.ga ../datasets/E0-T-60s-4CP-tau-40 ../output/xp4n/E0-T-60s-4CP-tau-40-tau40-k25-exp3.out >> ../output/xp4n/E0-T-60s-4CP-tau-40-tau40-k25-exp3.time;
+./deploy 3 100 40 25 ../ga_parameters/xp4/exp2.ga ../datasets/E0-T-60s-4CP-tau-40 ../output/xp4n/E0-T-60s-4CP-tau-40-tau40-k25-exp2.out >> ../output/xp4n/E0-T-60s-4CP-tau-40-tau40-k25-exp2.time;
+./deploy 3 100 40 25 ../ga_parameters/xp4/exp5.ga ../datasets/E0-T-60s-4CP-tau-40 ../output/xp4n/E0-T-60s-4CP-tau-40-tau40-k25-exp5.out >> ../output/xp4n/E0-T-60s-4CP-tau-40-tau40-k25-exp5.time;
+./deploy 3 100 40 25 ../ga_parameters/xp4/exp8.ga ../datasets/E0-T-60s-4CP-tau-40 ../output/xp4n/E0-T-60s-4CP-tau-40-tau40-k25-exp8.out >> ../output/xp4n/E0-T-60s-4CP-tau-40-tau40-k25-exp8.time;
