@@ -3,5 +3,5 @@ PopulationID	#Population
 CrossoverID CrossProbability
 MutationID	MutProbability
 
-P.S.: See example inside the folder
+P.S.: See example inside the project folder
 
