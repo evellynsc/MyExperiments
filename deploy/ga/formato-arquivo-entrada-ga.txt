@@ -1,5 +1,7 @@
-num_geracoes
-id_pop	num_pop
-id_cross prob_cross
-id_mut	prob_mut
+#generations
+PopulationID	#Population
+CrossoverID CrossProbability
+MutationID	MutProbability
+
+P.S.: See example inside the folder
 
